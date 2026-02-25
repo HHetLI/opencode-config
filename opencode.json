@@ -86,10 +86,10 @@
       }
     },
     "ark-coding-plan": {
-      "npm": "@ai-sdk/anthropic",
+      "npm": "@ai-sdk/openai-compatible",
       "name": "Volcengine Ark Coding Plan",
       "options": {
-        "baseURL": "https://ark.cn-beijing.volces.com/api/coding"
+        "baseURL": "https://ark.cn-beijing.volces.com/api/coding/v3"
       },
       "models": {
         "ark-code-latest": {
