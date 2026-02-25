@@ -96,10 +96,31 @@
           "name": "ark-code-latest"
         },
         "doubao-seed-2.0-code": {
-          "name": "doubao-seed-2.0-code"
+          "name": "doubao-seed-2.0-code",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 1024
+            }
+          }
         },
         "doubao-seed-code": {
-          "name": "doubao-seed-code"
+          "name": "doubao-seed-code",
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 1024
+            }
+          }
         },
         "glm-4.7": {
           "name": "glm-4.7",
