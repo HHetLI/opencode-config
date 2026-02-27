@@ -2,16 +2,13 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "max"
+      "model": "ark-coding-plan/kimi-k2.5"
     },
     "hephaestus": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "medium"
+      "model": "ark-coding-plan/doubao-seed-2.0-code"
     },
     "oracle": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "high"
+      "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "librarian": {
       "model": "bailian-coding-plan/MiniMax-M2.5"
@@ -20,40 +17,33 @@
       "model": "bailian-coding-plan/MiniMax-M2.5"
     },
     "multimodal-looker": {
-      "model": "bailian-coding-plan/kimi-k2.5"
+      "model": "ark-coding-plan/kimi-k2.5"
     },
     "prometheus": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "max"
+      "model": "ark-coding-plan/kimi-k2.5"
     },
     "metis": {
-      "model": "bailian-coding-plan/kimi-k2.5",
-      "variant": "max"
+      "model": "ark-coding-plan/kimi-k2.5"
     },
     "momus": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "medium"
+      "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "atlas": {
-      "model": "bailian-coding-plan/kimi-k2.5"
+      "model": "ark-coding-plan/kimi-k2.5"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "bailian-coding-plan/glm-5",
-      "variant": "high"
+      "model": "bailian-coding-plan/glm-5"
     },
     "ultrabrain": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "xhigh"
+      "model": "bailian-coding-plan/glm-5"
     },
     "deep": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "medium"
+      "model": "bailian-coding-plan/glm-5"
     },
     "artistry": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "variant": "high"
+      "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "quick": {
       "model": "bailian-coding-plan/MiniMax-M2.5"
@@ -67,5 +57,11 @@
     "writing": {
       "model": "bailian-coding-plan/MiniMax-M2.5"
     }
+  },
+  "background_task": {
+    "defaultConcurrency": 5,
+    "staleTimeoutMs": 120000,
+    "providerConcurrency": { "bailian-coding-plan": 5, "ark-coding-plan": 3 },
+    "modelConcurrency": { "bailian-coding-plan/qwen3.5-plus": 3 }
   }
 }
