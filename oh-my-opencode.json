@@ -11,10 +11,10 @@
       "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "librarian": {
-      "model": "bailian-coding-plan/MiniMax-M2.5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "explore": {
-      "model": "bailian-coding-plan/MiniMax-M2.5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "multimodal-looker": {
       "model": "ark-coding-plan/kimi-k2.5"
@@ -46,16 +46,16 @@
       "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "quick": {
-      "model": "bailian-coding-plan/MiniMax-M2.5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "unspecified-low": {
-      "model": "bailian-coding-plan/MiniMax-M2.5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "unspecified-high": {
       "model": "bailian-coding-plan/glm-5"
     },
     "writing": {
-      "model": "bailian-coding-plan/MiniMax-M2.5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     }
   },
   "background_task": {
