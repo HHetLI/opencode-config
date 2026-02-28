@@ -61,7 +61,7 @@
   "background_task": {
     "defaultConcurrency": 5,
     "staleTimeoutMs": 120000,
-    "providerConcurrency": { "bailian-coding-plan": 5, "ark-coding-plan": 3 },
+    "providerConcurrency": { "bailian-coding-plan": 5, "ark-coding-plan": 5 },
     "modelConcurrency": { "bailian-coding-plan/qwen3.5-plus": 3 }
   }
 }
