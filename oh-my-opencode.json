@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "ark-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5"
     },
     "hephaestus": {
       "model": "ark-coding-plan/doubao-seed-2.0-code"
@@ -17,30 +17,30 @@
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "multimodal-looker": {
-      "model": "ark-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5"
     },
     "prometheus": {
-      "model": "ark-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5"
     },
     "metis": {
-      "model": "ark-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5"
     },
     "momus": {
       "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "atlas": {
-      "model": "ark-coding-plan/kimi-k2.5"
+      "model": "bailian-coding-plan/kimi-k2.5"
     }
   },
   "categories": {
     "visual-engineering": {
-      "model": "bailian-coding-plan/glm-5"
+      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "ultrabrain": {
-      "model": "bailian-coding-plan/glm-5"
+      "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "deep": {
-      "model": "bailian-coding-plan/glm-5"
+      "model": "ark-coding-plan/doubao-seed-2.0-code"
     },
     "artistry": {
       "model": "bailian-coding-plan/qwen3.5-plus"
@@ -52,7 +52,7 @@
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     },
     "unspecified-high": {
-      "model": "bailian-coding-plan/glm-5"
+      "model": "bailian-coding-plan/qwen3.5-plus"
     },
     "writing": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
