@@ -25,7 +25,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         },
@@ -43,7 +43,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         },
@@ -52,7 +52,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         },
@@ -79,7 +79,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         }
@@ -109,7 +109,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         },
@@ -145,7 +145,7 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 1024
+              "budgetTokens": 32000
             }
           }
         }
