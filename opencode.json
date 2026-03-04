@@ -97,40 +97,6 @@
             }
           }
         },
-        "doubao-seed-2.0-pro": {
-          "name": "doubao-seed-2.0-pro",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled"
-            }
-          }
-        },
-        "doubao-seed-2.0-lite": {
-          "name": "doubao-seed-2.0-lite",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled"
-            }
-          }
-        },
         "kimi-k2.5": {
           "name": "kimi-k2.5",
           "modalities": {

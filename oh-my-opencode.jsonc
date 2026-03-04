@@ -57,7 +57,7 @@
     // Oracle: 架构咨询 read-only
     "oracle": {
       "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-code"],
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
@@ -67,7 +67,7 @@
     // Momus: 计划审查 - 需要高IQ但read-only
     "momus": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"],
+      "fallback_models": ["bailian-coding-plan/glm-5"],
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
@@ -96,15 +96,15 @@
   "categories": {
     // visual-engineering: UI/前端
     "visual-engineering": {
-      "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "bailian-coding-plan/kimi-k2.5"],
+      "model": "bailian-coding-plan/kimi-k2.5" ,
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code", "bailian-coding-plan/qwen3.5-plus"],
       "temperature": 0.7,
       "description": "Frontend, UI/UX, design, styling, animation"
     },
     // ultrabrain: 极限推理
     "ultrabrain": {
       "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"],
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high",
       "description": "Deep logical reasoning, complex architecture decisions"
     },
@@ -125,19 +125,19 @@
     // quick: 快速任务
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-lite", "bailian-coding-plan/qwen3.5-plus"],
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
       "temperature": 0.3,
       "description": "Trivial tasks - single file changes, typo fixes, simple modifications"
     },
     // unspecified-low: 一般低强度
     "unspecified-low": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-pro"],
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
       "description": "Tasks that don't fit other categories, low effort required"
     },
     // unspecified-high: 一般高强度
     "unspecified-high": {
-      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "model": "bailian-coding-plan/glm-5",
       "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"],
       "description": "Tasks that don't fit other categories, high effort required"
     },
