@@ -24,8 +24,7 @@
           },
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
+              "type": "enabled"
             }
           }
         },
@@ -39,31 +38,18 @@
           "name": "Qwen3 Coder Plus"
         },
         "MiniMax-M2.5": {
-          "name": "MiniMax M2.5",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
-            }
-          }
+          "name": "MiniMax M2.5"
         },
         "glm-5": {
           "name": "GLM-5",
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
+              "type": "enabled"
             }
           }
         },
         "glm-4.7": {
-          "name": "GLM-4.7",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 1024
-            }
-          }
+          "name": "GLM-4.7"
         },
         "kimi-k2.5": {
           "name": "Kimi K2.5",
@@ -78,8 +64,7 @@
           },
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
+              "type": "enabled"
             }
           }
         }
@@ -108,28 +93,43 @@
           },
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
+              "type": "enabled"
             }
           }
         },
-        "doubao-seed-code": {
-          "name": "doubao-seed-code",
+        "doubao-seed-2.0-pro": {
+          "name": "doubao-seed-2.0-pro",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 1024
+              "type": "enabled"
             }
           }
         },
-        "glm-4.7": {
-          "name": "glm-4.7"
-        },
-        "deepseek-v3.2": {
-          "name": "deepseek-v3.2"
-        },
-        "kimi-k2-thinking": {
-          "name": "kimi-k2-thinking"
+        "doubao-seed-2.0-lite": {
+          "name": "doubao-seed-2.0-lite",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          }
         },
         "kimi-k2.5": {
           "name": "kimi-k2.5",
@@ -144,8 +144,7 @@
           },
           "options": {
             "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32000
+              "type": "enabled"
             }
           }
         }
