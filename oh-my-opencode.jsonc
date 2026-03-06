@@ -97,62 +97,61 @@
     // visual-engineering: UI/前端
     "visual-engineering": {
       "model": "bailian-coding-plan/kimi-k2.5" ,
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code", "bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"],
-      "temperature": 0.7,
-      "description": "Frontend, UI/UX, design, styling, animation"
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code", "bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
     // ultrabrain: 极限推理
     "ultrabrain": {
       "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high",
-      "description": "Deep logical reasoning, complex architecture decisions"
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
+      "reasoningEffort": "high"
     },
     // deep: 深度编码
     "deep": {
       "model": "ark-coding-plan/doubao-seed-2.0-code",
       "fallback_models": ["bailian-coding-plan/glm-5"],
-      "reasoningEffort": "medium",
-      "description": "Goal-oriented autonomous problem-solving, thorough research"
+      "reasoningEffort": "medium"
     },
     // artistry: 创意任务
     "artistry": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"],
       "temperature": 0.9,
-      "description": "Highly creative/artistic tasks, novel ideas"
+      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
     // quick: 快速任务
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
-      "temperature": 0.3,
-      "description": "Trivial tasks - single file changes, typo fixes, simple modifications"
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"]
     },
     // unspecified-low: 一般低强度
     "unspecified-low": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
-      "description": "Tasks that don't fit other categories, low effort required"
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"]
     },
     // unspecified-high: 一般高强度
     "unspecified-high": {
       "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"],
-      "description": "Tasks that don't fit other categories, high effort required"
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
-    // writing: 文档写作 - GLM 5中文理解优秀
+    // writing: 文档写作
     "writing": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"],
-      "temperature": 0.5,
-      "description": "Documentation, prose, technical writing"
+      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
-    // 自定义: 代码审查专用
-    "code-review": {
+    // 自定义
+    "frontend-cn": {
+      "description": "中文生态前端开发专项优化，适配Vue/React国内主流框架，UI稿转代码、样式修复",
       "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "description": "Code review and quality analysis",
-      "prompt_append": "Focus on code quality, security issues, and best practices."
+      "prompt_append": "你是专注国内前端生态的开发专家，优先使用Vue3、React18、Tailwind CSS国内主流框架，代码符合国内编码规范，优先保证可运行性，注释使用中文"
+    },
+    "backend-cn-engineering": {
+      "description": "国内后端系统工程专项优化，适配Spring Cloud、Go Gin等主流栈，全链路闭环开发",
+      "model": "bailian-coding-plan/glm-5",
+      "thinking": {
+        "type": "enabled",
+        "budgetTokens": 32000
+      },
+      "prompt_append": "你是专注国内后端生态的系统架构师，优先使用Java、Go国内主流技术栈，代码符合阿里巴巴编码规范，先做架构设计再编码，保证接口安全与可扩展性",
+      "reasoningEffort": "medium"
     }
   },
   // ==========================================
