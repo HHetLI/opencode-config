@@ -14,7 +14,7 @@ git reset --hard origin/main
 
 ## 2.Enable OMO
 
-```json
+```sh
 # 增加项目配置
 cat > .opencode/opencode.json <<- 'EOM'
 {
