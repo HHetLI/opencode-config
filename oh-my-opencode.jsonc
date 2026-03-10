@@ -9,11 +9,11 @@
     // 备选: GLM 5 (同为Claude-family, 表现类似)
     "sisyphus": {
       "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
+      "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
-        "budgetTokens": 32000
+        "budgetTokens": 64000
       }
     },
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
@@ -30,12 +30,12 @@
     // Prometheus: 战略规划 - 需要Claude-like的指令遵循
     "prometheus": {
       "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "bailian-coding-plan/qwen3.5-plus"],
+      "fallback_models": ["ark-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel.",
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
-        "budgetTokens": 32000
+        "budgetTokens": 64000
       }
     },
     // Metis: 计划顾问 - 同Prometheus
@@ -51,23 +51,23 @@
     // Atlas: Todo执行者 - Kimi K2.5是最佳选择(文档明确推荐)
     "atlas": {
       "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
+      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "bailian-coding-plan/glm-5"],
       "reasoningEffort": "high"
     },
     // Oracle: 架构咨询 read-only
     "oracle": {
-      "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"],
+      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
-        "budgetTokens": 32000
+        "budgetTokens": 64000
       }
     },
     // Momus: 计划审查 - 需要高IQ但read-only
     "momus": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["bailian-coding-plan/glm-5"],
+      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/kimi-k2.5"],
       "reasoningEffort": "high",
       "thinking": {
         "type": "enabled",
@@ -77,17 +77,17 @@
     // Librarian: 文档搜索
     "librarian": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
     // Explore: 快速grep
     "explore": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"]
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code","bailian-coding-plan/qwen3.5-plus"]
     },
     // Multimodal-Looker: 视觉分析
     "multimodal-looker": {
-      "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5"]
+      "model": "ark-coding-plan/kimi-k2.5",
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-pro"]
     }
   },
   // ==========================================
@@ -97,7 +97,7 @@
     // visual-engineering: UI/前端
     "visual-engineering": {
       "model": "bailian-coding-plan/kimi-k2.5" ,
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code", "bailian-coding-plan/qwen3.5-plus", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-code"]
     },
     // ultrabrain: 极限推理
     "ultrabrain": {
@@ -120,17 +120,17 @@
     // quick: 快速任务
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"]
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"]
     },
     // unspecified-low: 一般低强度
     "unspecified-low": {
-      "model":  "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus"]
+      "model":  "bailian-coding-plan/qwen3.5-plus",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"]
     },
     // unspecified-high: 一般高强度
     "unspecified-high": {
-      "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-pro"]
+      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "fallback_models": ["bailian-coding-plan/glm-5"]
     },
     // writing: 文档写作
     "writing": {
@@ -153,6 +153,17 @@
       "prompt_append": "你是专注国内后端生态的系统架构师，优先使用Java、Go国内主流技术栈，代码符合阿里巴巴编码规范，先做架构设计再编码，保证接口安全与可扩展性",
       "reasoningEffort": "medium"
     }
+  },
+  "model_fallback": {
+    "enabled": true,
+    "global_fallback_chain": [
+      "bailian-coding-plan/glm-5",
+      "ark-coding-plan/doubao-seed-2.0-pro",
+      "ark-coding-plan/kimi-k2.5",
+      "bailian-coding-plan/qwen3.5-plus",
+      "ark-coding-plan/doubao-seed-2.0-code",
+      "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
+    ]
   },
   // ==========================================
   // 背景任务并发控制
