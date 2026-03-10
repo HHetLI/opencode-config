@@ -154,16 +154,7 @@
       "reasoningEffort": "medium"
     }
   },
-  "model_fallback": {
-    "enabled": true,
-    "global_fallback_chain": [
-      "bailian-coding-plan/glm-5",
-      "ark-coding-plan/kimi-k2.5",
-      "ark-coding-plan/doubao-seed-2.0-pro",
-      "bailian-coding-plan/qwen3.5-plus",
-      "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
-    ]
-  },
+  "model_fallback": true,
   // ==========================================
   // 背景任务并发控制
   // ==========================================
