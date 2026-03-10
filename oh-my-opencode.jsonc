@@ -158,10 +158,9 @@
     "enabled": true,
     "global_fallback_chain": [
       "bailian-coding-plan/glm-5",
-      "ark-coding-plan/doubao-seed-2.0-pro",
       "ark-coding-plan/kimi-k2.5",
+      "ark-coding-plan/doubao-seed-2.0-pro",
       "bailian-coding-plan/qwen3.5-plus",
-      "ark-coding-plan/doubao-seed-2.0-code",
       "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"
     ]
   },
@@ -171,8 +170,13 @@
   "background_task": {
     "defaultConcurrency": 8,
     "staleTimeoutMs": 180000,
-    "providerConcurrency": { "bailian-coding-plan": 5, "ark-coding-plan": 5 },
-    "modelConcurrency": { "bailian-coding-plan/qwen3.5-plus": 3 }
+    "providerConcurrency": { "bailian-coding-plan": 2, "ark-coding-plan": 2 },
+    "modelConcurrency": {
+      "bailian-coding-plan/kimi-k2.5": 1,
+      "bailian-coding-plan/glm-5": 1,
+      "ark-coding-plan/kimi-k2.5": 1,
+      "ark-coding-plan/glm-5": 1
+    }
   },
   // ==========================================
   // 运行时回退配置
