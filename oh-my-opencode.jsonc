@@ -8,46 +8,46 @@
     // Sisyphus: 主协调器 - Kimi K2.5最佳(Claude-like + Agent Swarm)
     // 备选: GLM 5 (同为Claude-family, 表现类似)
     "sisyphus": {
-      "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
+      "model": "tencent-coding-plan/kimi-k2.5",
+      "fallback_models": ["ark-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high"
     },
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
     // 可以尝试 doubao-seed-2.0-code 和 glm 5
     "hephaestus": {
       "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["bailian-coding-plan/glm-5"],
+      "fallback_models": ["tencent-coding-plan/glm-5"],
       "reasoningEffort": "high"
     },
     // Prometheus: 战略规划 - 需要Claude-like的指令遵循
     "prometheus": {
-      "model": "bailian-coding-plan/glm-5",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
+      "model": "tencent-coding-plan/glm-5",
+      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel.",
       "reasoningEffort": "high"
     },
     // Metis: 计划顾问 - 同Prometheus
     "metis": {
-      "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
+      "model": "bailian-coding-plan/kimi-k2.5",
+      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high"
     },
     // Atlas: Todo执行者 - Kimi K2.5是最佳选择(文档明确推荐)
     "atlas": {
-      "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "bailian-coding-plan/glm-5"],
+      "model": "tencent-coding-plan/kimi-k2.5",
+      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/glm-5"],
       "reasoningEffort": "high"
     },
     // Oracle: 架构咨询 read-only
     "oracle": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
-      "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
+      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high"
     },
     // Momus: 计划审查 - 需要高IQ但read-only
     "momus": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
-      "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/kimi-k2.5"],
+      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/kimi-k2.5"],
       "reasoningEffort": "high"
     },
     // Librarian: 文档搜索
@@ -62,7 +62,7 @@
     },
     // Multimodal-Looker: 视觉分析
     "multimodal-looker": {
-      "model": "ark-coding-plan/kimi-k2.5",
+      "model": "tencent-coding-plan/kimi-k2.5",
       "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-pro"]
     }
   },
@@ -72,26 +72,26 @@
   "categories": {
     // visual-engineering: UI/前端
     "visual-engineering": {
-      "model": "bailian-coding-plan/kimi-k2.5" ,
+      "model": "tencent-coding-plan/kimi-k2.5" ,
       "fallback_models": ["bailian-coding-plan/qwen3.5-plus", "ark-coding-plan/doubao-seed-2.0-code"]
     },
     // ultrabrain: 极限推理
     "ultrabrain": {
-      "model": "bailian-coding-plan/glm-5",
+      "model": "tencent-coding-plan/glm-5",
       "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high"
     },
     // deep: 深度编码
     "deep": {
       "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["bailian-coding-plan/glm-5"],
+      "fallback_models": ["tencent-coding-plan/glm-5"],
       "reasoningEffort": "medium"
     },
     // artistry: 创意任务
     "artistry": {
       "model": "bailian-coding-plan/qwen3.5-plus",
       "temperature": 0.9,
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
     // quick: 快速任务
     "quick": {
@@ -106,12 +106,12 @@
     // unspecified-high: 一般高强度
     "unspecified-high": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
-      "fallback_models": ["bailian-coding-plan/glm-5"]
+      "fallback_models": ["tencent-coding-plan/glm-5"]
     },
     // writing: 文档写作
     "writing": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
     },
     // 自定义
     "frontend-cn": {
@@ -121,7 +121,7 @@
     },
     "backend-cn-engineering": {
       "description": "国内后端系统工程专项优化，适配Spring Cloud、Go Gin等主流栈，全链路闭环开发",
-      "model": "bailian-coding-plan/glm-5",
+      "model": "tencent-coding-plan/glm-5",
       "prompt_append": "你是专注国内后端生态的系统架构师，优先使用Java、Go国内主流技术栈，代码符合阿里巴巴编码规范，先做架构设计再编码，保证接口安全与可扩展性",
       "reasoningEffort": "medium"
     }
@@ -133,7 +133,7 @@
   "background_task": {
     "defaultConcurrency": 8,
     "staleTimeoutMs": 180000,
-    "providerConcurrency": { "bailian-coding-plan": 2, "ark-coding-plan": 2 },
+    "providerConcurrency": { "bailian-coding-plan": 2, "ark-coding-plan": 2, "tencent-coding-plan": 2 },
     "modelConcurrency": {
       "bailian-coding-plan/kimi-k2.5": 1,
       "bailian-coding-plan/glm-5": 1,
