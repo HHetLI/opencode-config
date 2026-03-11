@@ -10,43 +10,27 @@
     "sisyphus": {
       "model": "ark-coding-plan/kimi-k2.5",
       "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 64000
-      }
+      "reasoningEffort": "high"
     },
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
     // 可以尝试 doubao-seed-2.0-code 和 glm 5
     "hephaestus": {
       "model": "ark-coding-plan/doubao-seed-2.0-code",
       "fallback_models": ["bailian-coding-plan/glm-5"],
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 32000
-      }
+      "reasoningEffort": "high"
     },
     // Prometheus: 战略规划 - 需要Claude-like的指令遵循
     "prometheus": {
       "model": "bailian-coding-plan/glm-5",
       "fallback_models": ["ark-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
       "prompt_append": "Leverage deep & quick agents heavily, always in parallel.",
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 64000
-      }
+      "reasoningEffort": "high"
     },
     // Metis: 计划顾问 - 同Prometheus
     "metis": {
       "model": "ark-coding-plan/kimi-k2.5",
       "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 32000
-      }
+      "reasoningEffort": "high"
     },
     // Atlas: Todo执行者 - Kimi K2.5是最佳选择(文档明确推荐)
     "atlas": {
@@ -58,21 +42,13 @@
     "oracle": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
       "fallback_models": ["bailian-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 64000
-      }
+      "reasoningEffort": "high"
     },
     // Momus: 计划审查 - 需要高IQ但read-only
     "momus": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
       "fallback_models": ["bailian-coding-plan/glm-5", "ark-coding-plan/kimi-k2.5"],
-      "reasoningEffort": "high",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 32000
-      }
+      "reasoningEffort": "high"
     },
     // Librarian: 文档搜索
     "librarian": {
@@ -146,10 +122,6 @@
     "backend-cn-engineering": {
       "description": "国内后端系统工程专项优化，适配Spring Cloud、Go Gin等主流栈，全链路闭环开发",
       "model": "bailian-coding-plan/glm-5",
-      "thinking": {
-        "type": "enabled",
-        "budgetTokens": 32000
-      },
       "prompt_append": "你是专注国内后端生态的系统架构师，优先使用Java、Go国内主流技术栈，代码符合阿里巴巴编码规范，先做架构设计再编码，保证接口安全与可扩展性",
       "reasoningEffort": "medium"
     }
