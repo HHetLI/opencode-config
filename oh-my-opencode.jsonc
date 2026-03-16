@@ -10,7 +10,8 @@
     "sisyphus": {
       "model": "tencent-coding-plan/kimi-k2.5",
       "fallback_models": ["ark-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high"
+      "reasoningEffort": "high",
+      "prompt_append": "在代码实现阶段需要采用TDD模式,reference to /tdd skill"
     },
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
     // 可以尝试 doubao-seed-2.0-code 和 glm 5
@@ -127,6 +128,9 @@
     }
   },
   "model_fallback": true,
+  "browser_automation_engine": {
+    "provider": "agent-browser"
+  },
   // ==========================================
   // 背景任务并发控制
   // ==========================================
