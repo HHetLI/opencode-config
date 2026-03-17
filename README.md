@@ -39,15 +39,15 @@ EOM
 ### 3.1 Add skill
 
 ```
-npx skills add <package> --skill <skills> -a opencode -y
+bunx skills add <package> --skill <skills> -a opencode -y
 # eg.
-npx skills add anthropics/skills --skill pdf docx -a opencode -y
+bunx skills add anthropics/skills --skill pdf docx -a opencode -y
 ```
 
 ### 3.2 Update skills
 
 ```
-npx skills update
+bunx skills update
 ```
 
 ### 3.3 Current skills
@@ -55,3 +55,9 @@ npx skills update
 - `anthropics/skills --skill pdf docx xlsx pptx`
 - `nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max`
 - `vercel-labs/agent-skills --skill vercel-react-best-practices`
+
+## 4. Common Tools
+```
+bunx install -g playwright agent-browser
+playwright install chromium firefox
+```
