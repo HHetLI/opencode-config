@@ -11,7 +11,7 @@
       "model": "tencent-coding-plan/kimi-k2.5",
       "fallback_models": ["ark-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.5-plus"],
       "reasoningEffort": "high",
-      "prompt_append": "在代码实现阶段需要采用TDD模式,reference to /tdd skill"
+      "prompt_append": "must reference to /test-driven-development skill"
     },
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
     // 可以尝试 doubao-seed-2.0-code 和 glm 5
@@ -24,14 +24,15 @@
     "prometheus": {
       "model": "tencent-coding-plan/glm-5",
       "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
-      "prompt_append": "Leverage deep & quick agents heavily, always in parallel.",
-      "reasoningEffort": "high"
+      "reasoningEffort": "high",
+      "prompt_append": "must reference to /test-driven-development skill"
     },
     // Metis: 计划顾问 - 同Prometheus
     "metis": {
       "model": "bailian-coding-plan/kimi-k2.5",
       "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.5-plus"],
-      "reasoningEffort": "high"
+      "reasoningEffort": "high",
+      "prompt_append": "must reference to /test-driven-development skill"
     },
     // Atlas: Todo执行者 - Kimi K2.5是最佳选择(文档明确推荐)
     "atlas": {
@@ -49,7 +50,8 @@
     "momus": {
       "model": "ark-coding-plan/doubao-seed-2.0-pro",
       "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/kimi-k2.5"],
-      "reasoningEffort": "high"
+      "reasoningEffort": "high",
+      "prompt_append": "must reference to /test-driven-development skill"
     },
     // Librarian: 文档搜索
     "librarian": {
