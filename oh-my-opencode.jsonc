@@ -56,11 +56,11 @@
     // Librarian: 文档搜索
     "librarian": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
     },
     // Explore: 快速grep
     "explore": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7-highspeed",
       "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code","bailian-coding-plan/qwen3.5-plus"]
     },
     // Multimodal-Looker: 视觉分析
@@ -94,11 +94,11 @@
     "artistry": {
       "model": "bailian-coding-plan/qwen3.5-plus",
       "temperature": 0.9,
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
     },
     // quick: 快速任务
     "quick": {
-      "model": "minimax-cn-coding-plan/MiniMax-M2.5-highspeed",
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7-highspeed",
       "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"]
     },
     // unspecified-low: 一般低强度
@@ -114,19 +114,7 @@
     // writing: 文档写作
     "writing": {
       "model": "bailian-coding-plan/qwen3.5-plus",
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.5-highspeed"]
-    },
-    // 自定义
-    "frontend-cn": {
-      "description": "中文生态前端开发专项优化，适配Vue/React国内主流框架，UI稿转代码、样式修复",
-      "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "prompt_append": "你是专注国内前端生态的开发专家，优先使用Vue3、React18、Tailwind CSS国内主流框架，代码符合国内编码规范，优先保证可运行性，注释使用中文"
-    },
-    "backend-cn-engineering": {
-      "description": "国内后端系统工程专项优化，适配Spring Cloud、Go Gin等主流栈，全链路闭环开发",
-      "model": "tencent-coding-plan/glm-5",
-      "prompt_append": "你是专注国内后端生态的系统架构师，优先使用Java、Go国内主流技术栈，代码符合阿里巴巴编码规范，先做架构设计再编码，保证接口安全与可扩展性",
-      "reasoningEffort": "medium"
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
     }
   },
   "model_fallback": true,
