@@ -57,7 +57,8 @@ bunx skills update
 - `vercel-labs/agent-skills --skill vercel-react-best-practices`
 
 ## 4. Common Tools
-```
-bunx install -g playwright agent-browser
+
+```sh
+bun install -g agent-browser playwright
 playwright install chromium firefox
 ```
