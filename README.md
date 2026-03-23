@@ -2,6 +2,12 @@
 
 ## 1.Setup
 
+**还没有装opencode**
+```sh
+git clone https://github.com/yandy/agent-config.git ~/.config/opencode
+```
+
+**已经装了opencode**
 ```sh
 cd ~/.config/opencode
 
@@ -12,11 +18,12 @@ git fetch -p origin
 git reset --hard origin/main
 ```
 
-## 2.OMO
+## 2.OMO(Oh My Opencode)
 
-#### 2.1 Enable OMO
+#### 2.1 为单个项目开启 OMO
 ```sh
-# 增加项目配置
+# Enable OMO, 在项目根目录下运行
+mkdir -p .opencode
 cat > .opencode/opencode.json <<- 'EOM'
 {
   "$schema": "https://opencode.ai/config.json",
