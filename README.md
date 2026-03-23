@@ -5,6 +5,7 @@
 **还没有装opencode**
 ```sh
 git clone https://github.com/yandy/agent-config.git ~/.config/opencode
+bun add -g opencode-ai
 ```
 
 **已经装了opencode**
