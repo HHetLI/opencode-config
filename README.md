@@ -67,6 +67,6 @@ bunx skills update
 ## 4. Common Tools
 
 ```sh
-bun install -g agent-browser playwright
+bun add -g agent-browser playwright
 playwright install chromium firefox
 ```
