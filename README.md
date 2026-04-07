@@ -29,7 +29,7 @@ cat > .opencode/opencode.json <<- 'EOM'
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    "oh-my-opencode@latest"
+    "oh-my-openagent@latest"
   ]
 }
 EOM
