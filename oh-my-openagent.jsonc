@@ -25,7 +25,7 @@
       "model": "tencent-coding-plan/glm-5",
       "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
       "reasoningEffort": "high",
-      "prompt_append": "must reference to /test-driven-development skill"
+      "prompt_append": "Always interview first. must reference to /test-driven-development skill"
     },
     // Metis: 计划顾问 - 同Prometheus
     "metis": {
