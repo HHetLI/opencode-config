@@ -94,8 +94,8 @@
         "baseURL": "https://coding.dashscope.aliyuncs.com/v1"
       },
       "models": {
-        "qwen3.5-plus": {
-          "name": "Qwen3.5 Plus",
+        "qwen3.6-plus": {
+          "name": "Qwen3.6 Plus",
           "modalities": {
             "input": [
               "text",
