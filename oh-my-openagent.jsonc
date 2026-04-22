@@ -16,8 +16,8 @@
     // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
     // 可以尝试 doubao-seed-2.0-code 和 glm 5
     "hephaestus": {
-      "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["tencent-coding-plan/glm-5"],
+      "model": "ark-coding-plan/glm-5.1",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"],
       "reasoningEffort": "high"
     },
     // Prometheus: 战略规划 - 需要Claude-like的指令遵循
@@ -29,7 +29,7 @@
     },
     // Metis: 计划顾问 - 同Prometheus
     "metis": {
-      "model": "bailian-coding-plan/kimi-k2.5",
+      "model": "ark-coding-plan/kimi-k2.5",
       "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.6-plus"],
       "reasoningEffort": "high",
       "prompt_append": "must reference to /test-driven-development skill"
@@ -42,13 +42,13 @@
     },
     // Oracle: 架构咨询 read-only
     "oracle": {
-      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "model": "bailian-coding-plan/qwen3.6-plus",
       "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.6-plus"],
       "reasoningEffort": "high"
     },
     // Momus: 计划审查 - 需要高IQ但read-only
     "momus": {
-      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "model": "bailian-coding-plan/kimi-k2.5",
       "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/kimi-k2.5"],
       "reasoningEffort": "high",
       "prompt_append": "must reference to /test-driven-development skill"
@@ -65,8 +65,8 @@
     },
     // Multimodal-Looker: 视觉分析
     "multimodal-looker": {
-      "model": "tencent-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/qwen3.6-plus", "ark-coding-plan/doubao-seed-2.0-pro"]
+      "model": "bailian-coding-plan/qwen3.6-plus",
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5","ark-coding-plan/doubao-seed-2.0-pro"]
     }
   },
   // ==========================================
@@ -76,7 +76,7 @@
     // visual-engineering: UI/前端
     "visual-engineering": {
       "model": "tencent-coding-plan/kimi-k2.5" ,
-      "fallback_models": ["bailian-coding-plan/qwen3.6-plus", "ark-coding-plan/doubao-seed-2.0-code"]
+      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"]
     },
     // ultrabrain: 极限推理
     "ultrabrain": {
@@ -86,8 +86,8 @@
     },
     // deep: 深度编码
     "deep": {
-      "model": "ark-coding-plan/doubao-seed-2.0-code",
-      "fallback_models": ["tencent-coding-plan/glm-5"],
+      "model": "ark-coding-plan/glm-5.1",
+      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"],
       "reasoningEffort": "medium"
     },
     // artistry: 创意任务
@@ -103,13 +103,13 @@
     },
     // unspecified-low: 一般低强度
     "unspecified-low": {
-      "model":  "bailian-coding-plan/qwen3.6-plus",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"]
+      "model":  "ark-coding-plan/doubao-seed-2.0-pro",
+      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"]
     },
     // unspecified-high: 一般高强度
     "unspecified-high": {
-      "model": "ark-coding-plan/doubao-seed-2.0-pro",
-      "fallback_models": ["tencent-coding-plan/glm-5"]
+      "model": "tencent-coding-plan/glm-5",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"]
     },
     // writing: 文档写作
     "writing": {

@@ -235,6 +235,41 @@
             }
           }
         },
+        "glm-5.1": {
+          "name": "glm-5.1",
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 131072
+            }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 131072
+          }
+        },
+        "kimi-k2.6": {
+          "name": "kimi-k2.6",
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 131072
+            }
+          },
+          "limit": {
+            "context": 262144,
+            "output": 131072
+          }
+        },
         "kimi-k2.5": {
           "name": "kimi-k2.5",
           "modalities": {
@@ -249,12 +284,25 @@
           "options": {
             "thinking": {
               "type": "enabled",
-              "budgetTokens": 16384
+              "budgetTokens": 32768
             }
           },
           "limit": {
             "context": 262144,
             "output": 32768
+          }
+        },
+        "minimax-m2.7": {
+          "name": "minimax-m2.5",
+          "options": {
+            "thinking": {
+              "type": "enabled",
+              "budgetTokens": 32768
+            }
+          },
+          "limit": {
+            "context": 196608,
+            "output": 131072
           }
         },
         "minimax-m2.5": {
