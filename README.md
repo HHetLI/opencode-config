@@ -78,5 +78,5 @@ EOM
 ```sh
 bun add -g agent-browser playwright
 playwright install chromium firefox
-uv tool install graphifyy[mcp]
+uv tool install graphifyy
 ```
