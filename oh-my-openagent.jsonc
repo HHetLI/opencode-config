@@ -5,116 +5,120 @@
   // AGENTS 配置 - 针对可用模型优化
   // ==========================================
   "agents": {
-    // Sisyphus: 主协调器 - Kimi K2.5最佳(Claude-like + Agent Swarm)
-    // 备选: GLM 5 (同为Claude-family, 表现类似)
+    // Main orchestrator: handles delegation and drives tasks to completion
     "sisyphus": {
-      "model": "tencent-coding-plan/kimi-k2.5",
-      "fallback_models": ["ark-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.6-plus"],
-      "reasoningEffort": "high",
-      "prompt_append": "must reference to /test-driven-development skill"
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "thinking": {"type": "enabled"},
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5", "tencent-coding-plan/glm-5"],
+      "prompt_append": "Always consult prometheus and atlas for planning. Never rush to implementation."
     },
-    // Hephaestus: 深度工作者 - 无GPT-5.3 Codex时最佳替代
-    // 可以尝试 doubao-seed-2.0-code 和 glm 5
+    // Deep autonomous worker: end-to-end implementation
     "hephaestus": {
-      "model": "ark-coding-plan/glm-5.1",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"],
-      "reasoningEffort": "high"
+      "model": "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "prompt_append": "Follow established plans precisely. Ask for clarification when plans are ambiguous."
     },
-    // Prometheus: 战略规划 - 需要Claude-like的指令遵循
+    // Strategic planner: interview mode before execution
     "prometheus": {
-      "model": "tencent-coding-plan/glm-5",
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/doubao-seed-2.0-pro"],
-      "reasoningEffort": "high",
-      "prompt_append": "Always interview first. must reference to /test-driven-development skill"
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"],
+      "prompt_append": "Always interview first, Validate scope before planning. Must reference to /test-driven-development skill"
     },
-    // Metis: 计划顾问 - 同Prometheus
+    // Plan consultant: reviews and improves plans
     "metis": {
-      "model": "ark-coding-plan/kimi-k2.5",
-      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.6-plus"],
-      "reasoningEffort": "high",
-      "prompt_append": "must reference to /test-driven-development skill"
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"],
+      "prompt_append": "Critically evaluate plans. Identify gaps, risks, and improvements. Be thorough. must reference to /test-driven-development skill"
     },
-    // Atlas: Todo执行者 - Kimi K2.5是最佳选择(文档明确推荐)
+    // Continuation and long-running task handler
     "atlas": {
       "model": "tencent-coding-plan/kimi-k2.5",
-      "fallback_models": ["bailian-coding-plan/kimi-k2.5", "ark-coding-plan/glm-5"],
-      "reasoningEffort": "high"
+      "thinking": {"type": "enabled"}
     },
-    // Oracle: 架构咨询 read-only
+    // Architecture consultant: complex design and debugging
     "oracle": {
-      "model": "bailian-coding-plan/qwen3.6-plus",
-      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/qwen3.6-plus"],
-      "reasoningEffort": "high"
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"]
     },
-    // Momus: 计划审查 - 需要高IQ但read-only
+    // Critic and reviewer
     "momus": {
-      "model": "bailian-coding-plan/kimi-k2.5",
-      "fallback_models": ["tencent-coding-plan/glm-5", "bailian-coding-plan/kimi-k2.5"],
-      "reasoningEffort": "high",
-      "prompt_append": "must reference to /test-driven-development skill"
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"],
+      "prompt_append": "Challenge all assumptions in plans. Look for edge cases, failure modes, and overlooked requirements"
     },
-    // Librarian: 文档搜索
+    // Documentation and code search
     "librarian": {
-      "model": "bailian-coding-plan/qwen3.6-plus",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
+      "model": "minimax-cn-coding-plan/MiniMax-M2.7-highspeed",
+      "fallback_models": [{"model": "deepseek/deepseek-v4-flash", "variant": "max"}]
     },
-    // Explore: 快速grep
+    // Fast codebase exploration
     "explore": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7-highspeed",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code","bailian-coding-plan/qwen3.6-plus"]
+      "fallback_models": [{"model": "deepseek/deepseek-v4-flash", "variant": "max"}]
     },
-    // Multimodal-Looker: 视觉分析
+    // Visual tasks: UI/UX, images, diagrams
     "multimodal-looker": {
-      "model": "bailian-coding-plan/qwen3.6-plus",
-      "fallback_models": ["tencent-coding-plan/kimi-k2.5","ark-coding-plan/doubao-seed-2.0-pro"]
+      "model": "ark-coding-plan/doubao-seed-2.0-pro",
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5"]
+    },
+    // Lightweight task executor for simple jobs
+    "sisyphus-junior": {
+      "model": "tencent-coding-plan/kimi-k2.5",
+      "fallback_models": [{"model": "deepseek/deepseek-v4-flash", "variant": "max"}]
     }
   },
   // ==========================================
   // CATEGORIES 配置
   // ==========================================
   "categories": {
-    // visual-engineering: UI/前端
+    // Visual work
     "visual-engineering": {
-      "model": "tencent-coding-plan/kimi-k2.5" ,
-      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"]
-    },
-    // ultrabrain: 极限推理
-    "ultrabrain": {
       "model": "tencent-coding-plan/glm-5",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro", "bailian-coding-plan/qwen3.6-plus"],
-      "reasoningEffort": "high"
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5"]
     },
-    // deep: 深度编码
+    // Architecture decisions, Strategic reasoning
+    "ultrabrain": {
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["tencent-coding-plan/glm-5"]
+    },
+    // Deep research and analysis
     "deep": {
-      "model": "ark-coding-plan/glm-5.1",
-      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"],
-      "reasoningEffort": "medium"
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
+      "fallback_models": ["tencent-coding-plan/glm-5", "ark-coding-plan/doubao-seed-2.0-pro"]
     },
-    // artistry: 创意任务
+    // Creative approaches to problems
     "artistry": {
-      "model": "bailian-coding-plan/qwen3.6-plus",
+      "model": "ark-coding-plan/doubao-seed-2.0-pro",
       "temperature": 0.9,
-      "fallback_models": ["tencent-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5"]
     },
-    // quick: 快速任务
+    // Trivial changes: fastest possible
     "quick": {
       "model": "minimax-cn-coding-plan/MiniMax-M2.7-highspeed",
-      "fallback_models": ["ark-coding-plan/doubao-seed-2.0-code"]
+      "fallback_models": [{"model": "deepseek/deepseek-v4-flash", "variant": "max"}]
     },
-    // unspecified-low: 一般低强度
+    // Standard coding tasks: good quality, fast
     "unspecified-low": {
-      "model":  "ark-coding-plan/doubao-seed-2.0-pro",
-      "fallback_models": ["bailian-coding-plan/qwen3.6-plus"]
+      "model":  "tencent-coding-plan/glm-5",
+      "fallback_models": ["tencent-coding-plan/kimi-k2.5"]
     },
-    // unspecified-high: 一般高强度
+    // Complex refactors: best quality
     "unspecified-high": {
-      "model": "tencent-coding-plan/glm-5",
+      "model":  "deepseek/deepseek-v4-pro",
+      "variant": "max",
       "fallback_models": ["ark-coding-plan/doubao-seed-2.0-pro"]
     },
-    // writing: 文档写作
+    // Documentation from plans
     "writing": {
-      "model": "bailian-coding-plan/qwen3.6-plus",
-      "fallback_models": ["tencent-coding-plan/kimi-k2.5", "minimax-cn-coding-plan/MiniMax-M2.7-highspeed"]
+      "model": "tencent-coding-plan/kimi-k2.5",
+      "fallback_models": [{"model": "deepseek/deepseek-v4-flash", "variant": "max"}]
     }
   },
   "model_fallback": true,
@@ -127,12 +131,9 @@
   "background_task": {
     "defaultConcurrency": 8,
     "staleTimeoutMs": 180000,
-    "providerConcurrency": { "bailian-coding-plan": 2, "ark-coding-plan": 2, "tencent-coding-plan": 2 },
+    "providerConcurrency": { "tencent-coding-plan": 2 },
     "modelConcurrency": {
-      "bailian-coding-plan/kimi-k2.5": 1,
-      "bailian-coding-plan/glm-5": 1,
-      "ark-coding-plan/kimi-k2.5": 1,
-      "ark-coding-plan/glm-5": 1
+      "tencent-coding-plan/glm-5": 1
     }
   },
   // ==========================================
