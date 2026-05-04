@@ -29,7 +29,7 @@ cat > .opencode/opencode.json <<- 'EOM'
 {
   "$schema": "https://opencode.ai/config.json",
   "plugin": [
-    "superpowers@git+https://github.com/yandy/superpowers.git"
+    "superpowers@git+https://github.com/obra/superpowers.git"
   ]
 }
 EOM
