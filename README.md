@@ -81,13 +81,6 @@ playwright install chromium firefox
 # bunx skills add microsoft/playwright-cli --skill playwright-cli -a opencode -y
 ```
 
-- ast-grep
-
-```sh
-cargo install ast-grep --locked
-# bunx skills add ast-grep/agent-skill --skill ast-grep -a opencode -y
-```
-
 - frontend dev
 
 ```sh
