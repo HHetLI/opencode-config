@@ -19,9 +19,12 @@ git fetch -p origin
 git reset --hard origin/main
 ```
 
-## 2. [superpowers](https://github.com/obra/superpowers)
+## 2. Plugins
 
-### 2.1 为单个项目开启 superpowers
+### 2.1 [superpowers](https://github.com/obra/superpowers)
+
+**为项目开启**
+
 ```bash
 # Enable superpowers, 在项目根目录下运行
 mkdir -p .opencode
@@ -33,6 +36,21 @@ cat > .opencode/opencode.json <<- 'EOM'
   ]
 }
 EOM
+```
+
+### 2.2 [graphify](https://github.com/safishamsi/graphify)
+
+**前置条件**
+
+```sh
+uv tool install graphifyy
+# graphify install --platform opencode
+```
+
+**为项目开启**
+
+```sh
+graphify opencode install
 ```
 
 ## 3. Skills Management
@@ -64,13 +82,6 @@ bunx skills update
 ```sh
 # bunx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max -a opencode -y
 # bunx skills add alchaincyf/huashu-design --skill huashu-design -a opencode -y
-```
-
-- graphify
-
-```sh
-uv tool install graphifyy
-# graphify install --platform opencode
 ```
 
 - browser automation
