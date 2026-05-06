@@ -3,12 +3,14 @@
 ## 1. Setup
 
 **还没有装opencode**
+
 ```sh
 git clone https://github.com/yandy/agent-config.git ~/.config/opencode
 bun add -g opencode-ai
 ```
 
 **已经装了opencode**
+
 ```sh
 cd ~/.config/opencode
 
@@ -17,6 +19,18 @@ git branch -M main
 git remote add origin https://github.com/yandy/agent-config.git
 git fetch -p origin
 git reset --hard origin/main
+```
+
+**add a fish abbr**
+
+`~/.config/fish/conf.d/opencode.fish`
+
+```fish
+function opencode_ext
+  echo "env OPENCODE_ENABLE_EXA=1 OPENCODE_EXPERIMENTAL_LSP_TOOL=1 opencode --port"
+end
+
+abbr -a opencode -f opencode_ext
 ```
 
 ## 2. Plugins
