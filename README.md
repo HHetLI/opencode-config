@@ -71,7 +71,7 @@ graphify opencode install
 
 ### 3.1 Add skill
 
-```
+```sh
 bunx skills add <package> --skill <skills> -a opencode -y
 # eg.
 bunx skills add anthropics/skills --skill pdf docx -a opencode -y
@@ -79,11 +79,23 @@ bunx skills add anthropics/skills --skill pdf docx -a opencode -y
 
 ### 3.2 Update skills
 
-```
-bunx skills update
+```sh
+bunx skills update -a opencode
 ```
 
-### 3.3 Current skills
+### 3.3 Remove skills
+
+```sh
+bunx skills remove <skills> -a opencode
+```
+
+### 3.4 List skills
+
+```sh
+bunx skills ls -a opencode
+```
+
+### 3.5 Current skills
 
 - office
 
