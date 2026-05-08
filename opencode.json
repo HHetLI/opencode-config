@@ -20,18 +20,15 @@
     }
   },
   "provider": {
-    "ark-coding-plan": {
+    "ark-volces": {
       "npm": "@ai-sdk/openai-compatible",
-      "name": "Volcengine Ark Coding Plan",
+      "name": "Volcengine Ark",
       "options": {
-        "baseURL": "https://ark.cn-beijing.volces.com/api/coding/v3"
+        "baseURL": "https://ark.cn-beijing.volces.com/api/v3"
       },
       "models": {
-        "ark-code-latest": {
-          "name": "ark-code-latest"
-        },
-        "doubao-seed-2.0-code": {
-          "name": "doubao-seed-2.0-code",
+        "doubao-seed-2-0-code-preview-260215": {
+          "name": "doubao-seed-2-0-code-preview-260215",
           "modalities": {
             "input": [
               "text",
@@ -47,8 +44,8 @@
             }
           }
         },
-        "doubao-seed-2.0-pro": {
-          "name": "doubao-seed-2.0-pro",
+        "doubao-seed-2-0-pro-260215": {
+          "name": "doubao-seed-2-0-pro-260215",
           "modalities": {
             "input": [
               "text",
@@ -64,8 +61,8 @@
             }
           }
         },
-        "doubao-seed-2.0-lite": {
-          "name": "doubao-seed-2.0-lite",
+        "doubao-seed-2-0-lite-260428": {
+          "name": "doubao-seed-2-0-lite-260428",
           "modalities": {
             "input": [
               "text",
@@ -79,89 +76,6 @@
             "thinking": {
               "type": "enabled"
             }
-          }
-        },
-        "glm-5.1": {
-          "name": "glm-5.1",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 131072
-            }
-          },
-          "limit": {
-            "context": 262144,
-            "output": 131072
-          }
-        },
-        "kimi-k2.6": {
-          "name": "kimi-k2.6",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 131072
-            }
-          },
-          "limit": {
-            "context": 262144,
-            "output": 131072
-          }
-        },
-        "kimi-k2.5": {
-          "name": "kimi-k2.5",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32768
-            }
-          },
-          "limit": {
-            "context": 262144,
-            "output": 32768
-          }
-        },
-        "minimax-m2.7": {
-          "name": "minimax-m2.5",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32768
-            }
-          },
-          "limit": {
-            "context": 196608,
-            "output": 131072
-          }
-        },
-        "minimax-m2.5": {
-          "name": "minimax-m2.5",
-          "options": {
-            "thinking": {
-              "type": "enabled",
-              "budgetTokens": 32768
-            }
-          },
-          "limit": {
-            "context": 196608,
-            "output": 131072
           }
         }
       }
