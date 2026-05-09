@@ -6,6 +6,9 @@
       "explore": {
           "model": "deepseek/deepseek-v4-flash",
           "variant": "max"
+      },
+      "multimodal-looker": {
+          "model": "alibaba-coding-plan-cn/qwen3.6-plus"
       }
   },
   "mcp": {
@@ -17,68 +20,6 @@
         "MINIMAX_API_HOST": "https://api.minimaxi.com"
       },
       "enabled": false
-    }
-  },
-  "provider": {
-    "ark-volces": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Volcengine Ark",
-      "options": {
-        "baseURL": "https://ark.cn-beijing.volces.com/api/v3"
-      },
-      "models": {
-        "doubao-seed-2-0-code-preview-260215": {
-          "name": "doubao-seed-2-0-code-preview-260215",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled"
-            }
-          }
-        },
-        "doubao-seed-2-0-pro-260215": {
-          "name": "doubao-seed-2-0-pro-260215",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled"
-            }
-          }
-        },
-        "doubao-seed-2-0-lite-260428": {
-          "name": "doubao-seed-2-0-lite-260428",
-          "modalities": {
-            "input": [
-              "text",
-              "image"
-            ],
-            "output": [
-              "text"
-            ]
-          },
-          "options": {
-            "thinking": {
-              "type": "enabled"
-            }
-          }
-        }
-      }
     }
   }
 }
