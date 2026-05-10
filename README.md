@@ -117,9 +117,3 @@ bun add -g playwright @playwright/cli
 playwright install chromium firefox
 # bunx skills add microsoft/playwright-cli --skill playwright-cli -a opencode -y
 ```
-
-- frontend dev
-
-```sh
-# bunx skills add vercel-labs/agent-skills --skill vercel-react-best-practices -a opencode -y
-```
