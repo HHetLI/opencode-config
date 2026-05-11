@@ -1,4 +1,5 @@
 ---
+name: multimodal-looker
 description: When the current model cannot directly "see" media files (images, videos, screenshots, diagrams), delegate visual analysis to a multimodal subagent. First try Read tool yourself — only invoke this skill as fallback if the model cannot interpret the visual content.
 ---
 

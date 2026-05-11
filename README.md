@@ -97,6 +97,12 @@ bunx skills ls -a opencode
 
 ### 3.5 Current skills
 
+- skill-creator
+
+```sh
+# bunx skills add anthropics/skills --skill skill-creator -a opencode -y
+```
+
 - office
 
 ```sh
