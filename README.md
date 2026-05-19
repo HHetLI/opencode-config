@@ -6,7 +6,7 @@
 
 ```sh
 git clone https://github.com/yandy/agent-config.git ~/.config/opencode
-bun add -g opencode-ai
+npm install -g opencode-ai
 ```
 
 **已经装了opencode**
@@ -72,27 +72,27 @@ graphify opencode install
 ### 3.1 Add skill
 
 ```sh
-bunx skills add <package> --skill <skills> -a opencode -y
+npx skills add <package> --skill <skills> -a opencode -y
 # eg.
-bunx skills add anthropics/skills --skill pdf docx -a opencode -y
+npx skills add anthropics/skills --skill pdf docx -a opencode -y
 ```
 
 ### 3.2 Update skills
 
 ```sh
-bunx skills update -a opencode
+npx skills update -a opencode
 ```
 
 ### 3.3 Remove skills
 
 ```sh
-bunx skills remove <skills> -a opencode
+npx skills remove <skills> -a opencode
 ```
 
 ### 3.4 List skills
 
 ```sh
-bunx skills ls -a opencode
+npx skills ls -a opencode
 ```
 
 ### 3.5 Current skills
@@ -100,26 +100,33 @@ bunx skills ls -a opencode
 - skill-creator
 
 ```sh
-# bunx skills add anthropics/skills --skill skill-creator -a opencode -y
+# npx skills add anthropics/skills --skill skill-creator -a opencode -y
 ```
 
 - office
 
 ```sh
-# bunx skills add anthropics/skills --skill pdf docx xlsx pptx -a opencode -y
+# npx skills add anthropics/skills --skill pdf docx xlsx pptx -a opencode -y
 ```
 
 - ui/ux
 
 ```sh
-# bunx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max -a opencode -y
-# bunx skills add alchaincyf/huashu-design --skill huashu-design -a opencode -y
+# npx skills add nextlevelbuilder/ui-ux-pro-max-skill --skill ui-ux-pro-max -a opencode -y
+# npx skills add alchaincyf/huashu-design --skill huashu-design -a opencode -y
 ```
 
 - browser automation
 
 ```sh
-bun add -g playwright @playwright/cli
+npm install -g playwright @playwright/cli
 playwright install chromium firefox
-# bunx skills add microsoft/playwright-cli --skill playwright-cli -a opencode -y
+# npx skills add microsoft/playwright-cli --skill playwright-cli -a opencode -y
+```
+
+- [context7](https://github.com/upstash/context7)
+
+```sh
+npx ctx7 login
+# npx ctx7 setup --opencode
 ```
