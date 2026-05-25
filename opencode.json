@@ -8,7 +8,7 @@
       "variant": "max"
     },
     "multimodal-looker": {
-      "model": "alibaba-coding-plan-cn/qwen3.6-plus"
+      "model": "alibaba-cn/qwen3.6-plus"
     }
   },
   "mcp": {
