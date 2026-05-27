@@ -52,21 +52,6 @@ cat > .opencode/opencode.json <<- 'EOM'
 EOM
 ```
 
-### 2.2 [graphify](https://github.com/safishamsi/graphify)
-
-**前置条件**
-
-```sh
-uv tool install graphifyy
-# graphify install --platform opencode
-```
-
-**为项目开启**
-
-```sh
-graphify opencode install
-```
-
 ## 3. Skills Management
 
 ### 3.1 Add skill
