@@ -4,9 +4,14 @@
 与用户沟通时使用简体中文
 <!-- 语言设置 -->
 
+<!-- code navigation -->
+- 用 `grep`/`glob` 做发现（找文件、搜模式）
+- 用 `lsp` 做理解（定义跳转、引用查找、类型信息、搜索符号）
+- 找到文件后，优先用 `lsp` 导航，而不是读取整个文件
+<!-- code navigation -->
+
 <!-- python and js -->
 - 尽可能使用 `uv` 作为 `python` 环境管理工具, 例如: use `uv run python` instead of `python`; use `uv venv` instead of `python -mvenv`; use `uv pip` instead of `pip`
-- `lsp` 用于符号导航（跳转定义/查找引用/类型信息/搜索符号）；`grep` 用于文本模式搜索（字符串/错误信息/日志）；`glob` 用于文件名匹配。优先使用 `lsp` 完成其能力范围内的任务。
 <!-- python and js -->
 
 <!-- context7 -->
@@ -14,7 +19,7 @@ Use the `ctx7` CLI to fetch current documentation whenever the user asks about a
 
 Do not use for: refactoring, writing scripts from scratch, debugging business logic, code review, or general programming concepts.
 
-## Steps
+**Steps:**
 
 1. Resolve library: `npx ctx7@latest library <name> "<user's question>"` — use the official library name with proper punctuation (e.g., "Next.js" not "nextjs", "Customer.io" not "customerio", "Three.js" not "threejs")
 2. Pick the best match (ID format: `/org/project`) by: exact name match, description relevance, code snippet count, source reputation (High/Medium preferred), and benchmark score (higher is better). If results don't look right, try alternate names or queries (e.g., "next.js" not "nextjs", or rephrase the question)
