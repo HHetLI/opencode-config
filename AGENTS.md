@@ -1,12 +1,13 @@
 # 全局规则
 
-## 语言设置
-
-- 与用户沟通时使用简体中文
+<!-- 语言设置 -->
+与用户沟通时使用简体中文
+<!-- 语言设置 -->
 
 <!-- python and js -->
-
 - 尽可能使用 `uv` 作为 `python` 环境管理工具, 例如: use `uv run python` instead of `python`; use `uv venv` instead of `python -mvenv`; use `uv pip` instead of `pip`
+- `lsp` 用于符号导航（跳转定义/查找引用/类型信息/搜索符号）；`grep` 用于文本模式搜索（字符串/错误信息/日志）；`glob` 用于文件名匹配。优先使用 `lsp` 完成其能力范围内的任务。
+<!-- python and js -->
 
 <!-- context7 -->
 Use the `ctx7` CLI to fetch current documentation whenever the user asks about a library, framework, SDK, API, CLI tool, or cloud service -- even well-known ones like React, Next.js, Prisma, Express, Tailwind, Django, or Spring Boot. This includes API syntax, configuration, version migration, library-specific debugging, setup instructions, and CLI tool usage. Use even when you think you know the answer -- your training data may not reflect recent changes. Prefer this over web search for library docs.
