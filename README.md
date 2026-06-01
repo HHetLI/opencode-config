@@ -37,21 +37,6 @@ abbr -a opencode -f opencode_ext
 
 ### 2.1 [superpowers](https://github.com/obra/superpowers)
 
-**为项目开启**
-
-```bash
-# Enable superpowers, 在项目根目录下运行
-mkdir -p .opencode
-cat > .opencode/opencode.json <<- 'EOM'
-{
-  "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "superpowers@git+https://github.com/obra/superpowers.git"
-  ]
-}
-EOM
-```
-
 ## 3. Skills Management
 
 ### 3.1 Add skill

@@ -12,6 +12,9 @@
       "model": "alibaba-cn/qwen3.6-plus"
     }
   },
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
   "mcp": {
     "MiniMax": {
       "type": "local",
@@ -21,7 +24,7 @@
         "-y"
       ],
       "environment": {
-        "MINIMAX_API_KEY": "{env:MINIMAX_API_KEY}",
+        "MINIMAX_API_KEY": "{env:MINIMAX_CN_API_KEY}",
         "MINIMAX_API_HOST": "https://api.minimaxi.com"
       },
       "enabled": false
