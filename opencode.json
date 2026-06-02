@@ -3,6 +3,7 @@
   "lsp": true,
   "model": "deepseek/deepseek-v4-flash",
   "small_model": "deepseek/deepseek-v4-flash",
+  "default_agent": "plan",
   "agent": {
     "explore": {
       "model": "deepseek/deepseek-v4-flash",
