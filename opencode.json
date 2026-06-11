@@ -5,6 +5,9 @@
   "small_model": "deepseek/deepseek-v4-flash",
   "default_agent": "plan",
   "agent": {
+    "general": {
+      "description": "General-purpose agent use a inherited model. Use this agent to execute multiple units of work in parallel."
+    },
     "general-small": {
       "description": "General-purpose agent use a fast, cheap model. Use this agent for mechanical implementation tasks (isolated functions, clear specs, 1-2 files).",
       "mode": "subagent",
