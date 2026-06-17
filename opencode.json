@@ -32,20 +32,5 @@
   },
   "plugin": [
     "superpowers@git+https://github.com/yandy/superpowers.git#oc"
-  ],
-  "mcp": {
-    "MiniMax": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "minimax-coding-plan-mcp",
-        "-y"
-      ],
-      "environment": {
-        "MINIMAX_API_KEY": "{env:MINIMAX_CN_API_KEY}",
-        "MINIMAX_API_HOST": "https://api.minimaxi.com"
-      },
-      "enabled": false
-    }
-  }
+  ]
 }
