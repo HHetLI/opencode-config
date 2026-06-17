@@ -30,6 +30,6 @@
     }
   },
   "plugin": [
-    "superpowers@git+https://github.com/yandy/superpowers.git#oc"
+    "superpowers@git+https://github.com/yandy/superpowers.git"
   ]
 }
