@@ -4,25 +4,20 @@
   "model": "deepseek/deepseek-v4-pro",
   "small_model": "deepseek/deepseek-v4-flash",
   "agent": {
-    "general": {
-      "description": "General-purpose agent use a inherited model. Use this agent to execute multiple units of work in parallel."
+    "explore": {
+      "model": "deepseek/deepseek-v4-flash",
+      "variant": "max"
     },
     "general-small": {
-      "description": "General-purpose agent use a fast, cheap model. Use this agent for mechanical implementation tasks (isolated functions, clear specs, 1-2 files).",
-      "mode": "subagent",
       "model": "deepseek/deepseek-v4-flash",
       "variant": "max"
     },
     "general-standard": {
-      "description": "General-purpose agent use a standard model. Use this agent for integration and judgment tasks (multi-file coordination, pattern matching, debugging)",
-      "mode": "subagent",
       "model": "deepseek/deepseek-v4-pro",
-      "variant": "high"
+      "variant": "max"
     },
     "general-max": {
-      "description": "General-purpose agent use the most capable available model. Use this agent for architecture, design, and review tasks",
-      "mode": "subagent",
-      "model": "deepseek/deepseek-v4-pro",
+      "model": "tencent-tokenhub/glm-5.2",
       "variant": "max"
     },
     "multimodal-looker": {
@@ -30,7 +25,7 @@
     }
   },
   "plugin": [
-    "superpowers@git+https://github.com/yandy/superpowers.git"
+    "superpowers@git+https://github.com/yandy/superpowers.git#opencode"
   ],
   "provider": {
     "alibaba-cn": {
