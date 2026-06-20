@@ -10,6 +10,3 @@
 
 ## python and js
 - 尽可能使用 `uv` 作为 `python` 环境管理工具, 例如: use `uv run python` instead of `python`; use `uv venv` instead of `python -mvenv`; use `uv pip` instead of `pip`
-
-## General-purpose subagent
-这里有多个General-purpose的`subagent`, 他们的区别在于绑定了不同的`model`。 你可以根据不同的 `model` 需求，选择不同的 `subagent`
