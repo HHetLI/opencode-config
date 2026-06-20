@@ -30,6 +30,50 @@
   "provider": {
     "alibaba-cn": {
       "models": {
+        "qwen3.7-max": {
+          "name": "Qwen3.7 Max",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1006592,
+            "output": 65536
+          },
+          "cost": {
+            "input": 12,
+            "output": 36,
+            "cache_read": 2.4
+          }
+        },
+        "qwen3.7-plus": {
+          "name": "Qwen3.7 Plus",
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1006592,
+            "output": 65536
+          },
+          "cost": {
+            "input": 2,
+            "output": 8,
+            "cache_read": 0.4
+          }
+        },
         "glm-5.2": {
           "name": "GLM-5.2",
           "modalities": {
