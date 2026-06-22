@@ -27,7 +27,7 @@ git reset --hard origin/main
 
 ```fish
 function opencode_ext
-  echo "env OPENCODE_ENABLE_EXA=1 OPENCODE_EXPERIMENTAL_LSP_TOOL=1 opencode --port"
+  echo "env OPENCODE_ENABLE_EXA=1 OPENCODE_EXPERIMENTAL_LSP_TOOL=1 opencode"
 end
 
 abbr -a opencode -f opencode_ext

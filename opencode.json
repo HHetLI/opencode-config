@@ -3,55 +3,206 @@
   "lsp": true,
   "model": "deepseek/deepseek-v4-pro",
   "small_model": "deepseek/deepseek-v4-flash",
-  "default_agent": "plan",
   "agent": {
+    "explore": {
+      "model": "deepseek/deepseek-v4-flash",
+      "variant": "max"
+    },
     "general-small": {
-      "description": "General-purpose agent use a fast, cheap model. Use this agent for mechanical implementation tasks (isolated functions, clear specs, 1-2 files).",
-      "mode": "subagent",
       "model": "deepseek/deepseek-v4-flash",
       "variant": "max"
     },
     "general-standard": {
-      "description": "General-purpose agent use a standard model. Use this agent for integration and judgment tasks (multi-file coordination, pattern matching, debugging)",
-      "mode": "subagent",
-      "model": "deepseek/deepseek-v4-pro",
-      "variant": "high"
-    },
-    "general-max": {
-      "description": "General-purpose agent use the most capable available model. Use this agent for architecture, design, and review tasks",
-      "mode": "subagent",
       "model": "deepseek/deepseek-v4-pro",
       "variant": "max"
     },
+    "general-max": {
+      "model": "tencent-tokenhub/glm-5.2",
+      "variant": "max"
+    },
     "multimodal-looker": {
-      "model": "alibaba-cn/qwen3.6-plus"
+      "model": "alibaba-cn/qwen3.7-plus"
     }
   },
   "plugin": [
-    "superpowers@git+https://github.com/yandy/superpowers.git#oc"
+    "superpowers@git+https://github.com/yandy/superpowers.git#opencode"
   ],
-  "mcp": {
-    "MiniMax": {
-      "type": "local",
-      "command": [
-        "uvx",
-        "minimax-coding-plan-mcp",
-        "-y"
-      ],
-      "environment": {
-        "MINIMAX_API_KEY": "{env:MINIMAX_CN_API_KEY}",
-        "MINIMAX_API_HOST": "https://api.minimaxi.com"
-      },
-      "enabled": false
+  "provider": {
+    "alibaba-cn": {
+      "models": {
+        "qwen3.7-max": {
+          "name": "Qwen3.7 Max",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1006592,
+            "output": 65536
+          },
+          "cost": {
+            "input": 12,
+            "output": 36,
+            "cache_write": 12,
+            "cache_read": 2.4
+          }
+        },
+        "qwen3.7-plus": {
+          "name": "Qwen3.7 Plus",
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1006592,
+            "output": 65536
+          },
+          "cost": {
+            "input": 2,
+            "output": 8,
+            "cache_write": 2,
+            "cache_read": 0.4
+          }
+        },
+        "glm-5.2": {
+          "name": "GLM-5.2",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoningEffort": "high"
+          },
+          "variants": {
+            "high": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoningEffort": "max"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 8,
+            "output": 28,
+            "cache_write": 8,
+            "cache_read": 2
+          }
+        },
+        "kimi-k2.7-code": {
+          "name": "KIMI K2.7 code",
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 262114,
+            "input": 229376,
+            "output": 16384
+          },
+          "cost": {
+            "input": 6.5,
+            "output": 27,
+            "cache_write": 6.5,
+            "cache_read": 1.3
+          }
+        }
+      }
     },
-    "drawio": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@drawio/mcp"
-      ],
-      "enabled": false
+    "tencent-tokenhub": {
+      "models": {
+        "glm-5.2": {
+          "name": "GLM-5.2",
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            },
+            "reasoningEffort": "high"
+          },
+          "variants": {
+            "high": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoningEffort": "high"
+            },
+            "max": {
+              "thinking": {
+                "type": "enabled"
+              },
+              "reasoningEffort": "max"
+            }
+          },
+          "limit": {
+            "context": 1048576,
+            "input": 1048576,
+            "output": 131072
+          },
+          "cost": {
+            "input": 8,
+            "output": 28,
+            "cache_write": 0,
+            "cache_read": 2
+          }
+        },
+        "kimi-k2.7-code": {
+          "name": "KIMI K2.7 code",
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "options": {
+            "thinking": {
+              "type": "enabled"
+            }
+          },
+          "limit": {
+            "context": 262114,
+            "input": 262114,
+            "output": 262114
+          },
+          "cost": {
+            "input": 6.5,
+            "output": 27,
+            "cache_write": 0,
+            "cache_read": 1.3
+          }
+        }
+      }
     }
   }
 }
